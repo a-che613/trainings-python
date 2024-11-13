@@ -66,10 +66,15 @@ def view_expenses():
             else:
               print('No expense found for that month')
           else:
-            if int(months[month.capitalize()]) == int(date_obj.month):
-              print(expense)
-            else:
-              print('No expense found for that month')
+            try:
+              if int(months[month.capitalize()]) == int(date_obj.month):
+                print(expense)
+              else:
+                print('No expense found for that month')
+            except Exception as e:
+              print('Invalid choice')
+            # end try
+            
       else:
         print('invalid choice')
               
