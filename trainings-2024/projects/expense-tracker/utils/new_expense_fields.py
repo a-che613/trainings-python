@@ -14,6 +14,8 @@ def newExpenseFields():
       
       
   category = input("Enter category: ")
+  while not category:
+    category = input("Please enter a category: ")
   
   amount = input("Enter amount: ")
   
